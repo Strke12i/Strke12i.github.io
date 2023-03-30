@@ -6,10 +6,13 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
 
-  <title>Vite App</title>
-  <link rel="stylesheet" href="/assets/index-2bb7def3.css">
+  <title>Ana's Puppies</title>
+  <link rel="stylesheet" href="/assets/index-03ee20dc.css">
 </head>
 
 <body class="bg-gradient-to-br from-pink-600 to-red-300 via-purple-400 antialiased bg-no-repeat bg-fixed text-white">
@@ -45,8 +48,7 @@
     <ul>
       <li>
         <a href="#" class="rounded-full px-3 py-2 font-semibold bg-white bg-opacity-10 flex text-center items-center group">
-          <span class="mr-2">
-            <i class="fa-thin fa-right-to-bracket"></i>Sign in</span>
+          <span class="mr-2">Sign in</span>
         </a>
       </li>
     </ul>
@@ -55,11 +57,10 @@
   </header>
 
   <div class="flex flex-1">
-    <div class="sidebar hidden sm:block h-fit p-5 relative overflow-hidden max-w-[17%]">
-
-      <i class="arrow_t fa-solid fa-arrow-right fa-xl rounded absolute mb-3"></i>
+    <div class="sidebar h-fit p-5 relative overflow-hidden max-w-[17%]">
+      <i id="arrow-icon" class="hidden md:block arrow_t fa-solid fa-arrow-right fa-xl rounded absolute mb-3"></i>
     
-      <div class="flex">
+      <div class="flex mt-3">
         <div class="inline-block align-middle mt-3 text-xl">
           <span class="block">T</span>  <span class="block">O</span> <span class="block">O</span>
           <span class="block"></br></span>
@@ -68,16 +69,19 @@
           <span class="block">P</span><span class="block">U</span><span class="block">P</span><span class="block">P</span><span class="block">I</span><span class="block">E</span><span class="block">S</span>
         </div>
     
-        <div>
-          <div class="hidden profile bg-transparent ml-4 p-3 mt-3rounded-md">
-            <div class="flex items-center space-x-4">
+        <div class="hidden md:block">
+          <div class="hidden profile bg-transparent ml-4 p-3 mt-3 rounded-md">
+            <div class="grid grid-cols-1 lg:flex">
               <img class="w-12 h-12 rounded-full border" src="ana.jpeg" alt="Foto de perfil">
-              <h2 class="text-lg font-bold">Ana Clara Bordin</h2>
+              <h2 class="col-span-1 font-bold mt-2 ml-0 lg:text-xl lg:mt-0 lg:ml-2 ">Ana Clara Bordin</h2>
             </div>
-            <p class="mt-1">Mussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Cevadis im ampola pa arma uma pindureta.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
+            <p class="mt-1 hidden lg:block">Mussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Cevadis im ampola pa arma uma pindureta.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
             
-            <img class="w-12 h-12 rounded-full border float-right" src="ana2.jpg" alt="Foto">
-            <p class="mt-1">Mussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Cevadis im ampola pa arma uma pindureta.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
+            <img class="w-12 h-12 rounded-full border float-none mt-3 lg:mt-0 lg:float-right" src="ana2.jpg" alt="Foto">
+            <img class="block lg:hidden w-12 h-12 rounded-full border float-none mt-3 lg:mt-0 lg:float-right" src="ana2.jpg" alt="Foto">
+            <img class="block lg:hidden w-12 h-12 rounded-full border float-none mt-3 lg:mt-0 lg:float-right" src="ana2.jpg" alt="Foto">
+        
+            <p class="mt-1 hidden lg:block">AMussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Cevadis im ampola pa arma uma pindureta.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
             
           </div>
            
@@ -86,7 +90,7 @@
   </div>
   <div class="flex flex-col w-full ">
     <h1 class="text-3xl text-purple-600 items-center text-center mb-5">My Puppies</h1>
-    <div class="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center mx-auto">
+    <div class="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-2 gap-4 items-center mx-auto">
       <div class="overflow-hidden">
         <img class="w-56 h-56 rounded-xl" src="puppies/p1.jpg" alt="Imagem 1">
         <div class="p-4">
@@ -141,6 +145,15 @@
     const btn = document.querySelector('.arrow_t');
     const sidebar = document.querySelector('.sidebar');
     const profile = document.querySelector(".profile")
+
+  const arrowIcon = document.getElementById('arrow-icon');
+  arrowIcon.addEventListener('click', () => {
+    arrowIcon.classList.add('clicked');
+    setTimeout(() => {
+      arrowIcon.classList.remove('clicked');
+    }, 500);
+  });
+
   
     btn.addEventListener('click', () => {
       if (sidebar.classList.contains('w-[20%]')) {
