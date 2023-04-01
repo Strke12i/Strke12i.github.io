@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/puppie.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,15 +12,14 @@
     
 
   <title>Ana's Puppies</title>
-  <link rel="stylesheet" href="/assets/index-03ee20dc.css">
+  <link rel="stylesheet" href="/assets/index-3610e45b.css">
 </head>
 
 <body class="bg-gradient-to-br from-pink-600 to-red-300 via-purple-400 antialiased bg-no-repeat bg-fixed text-white">
   <header class="container mx-auto px-4 py-6 flex items-center justify-between">
-    <div>
-      <button class="text-white">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+    <div class="flex">
+      <img class="w-12 h-12 rounded-full " src="puppie.png" alt="Foto">
+   
       <a href="#" class="relative font-bold text-2xl ml-1 gilbert">Ana's <br>
         <p class="text-2xl ml-2">Puppies</p>
       </a>
@@ -48,7 +47,7 @@
     <ul>
       <li>
         <a href="#" class="rounded-full px-3 py-2 font-semibold bg-white bg-opacity-10 flex text-center items-center group">
-          <span class="mr-2">Sign in</span>
+          <span class="mr-2 text-center">Sign in</span>
         </a>
       </li>
     </ul>
@@ -57,7 +56,7 @@
   </header>
 
   <div class="flex flex-1">
-    <div class="sidebar h-fit p-5 relative overflow-hidden max-w-[17%]">
+    <div class="sidebar h-fit p-5 relative overflow-hidden max-w-[10%] md:max-w-[20%] ">
       <i id="arrow-icon" class="hidden md:block arrow_t fa-solid fa-arrow-right fa-xl rounded absolute mb-3"></i>
     
       <div class="flex mt-3">
@@ -78,9 +77,6 @@
             <p class="mt-1 hidden lg:block">Mussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Cevadis im ampola pa arma uma pindureta.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
             
             <img class="w-12 h-12 rounded-full border float-none mt-3 lg:mt-0 lg:float-right" src="ana2.jpg" alt="Foto">
-            <img class="block lg:hidden w-12 h-12 rounded-full border float-none mt-3 lg:mt-0 lg:float-right" src="ana2.jpg" alt="Foto">
-            <img class="block lg:hidden w-12 h-12 rounded-full border float-none mt-3 lg:mt-0 lg:float-right" src="ana2.jpg" alt="Foto">
-        
             <p class="mt-1 hidden lg:block">AMussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Cevadis im ampola pa arma uma pindureta.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
             
           </div>
@@ -89,48 +85,49 @@
     </div>
   </div>
   <div class="flex flex-col w-full ">
-    <h1 class="text-3xl text-purple-600 items-center text-center mb-5">My Puppies</h1>
+     <h1 class="text-3xl mb-4 text-center font-bold text-white drop-shadow-lg shadow-black">My Puppies</h1>
+
     <div class="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-2 gap-4 items-center mx-auto">
-      <div class="overflow-hidden">
-        <img class="w-56 h-56 rounded-xl" src="puppies/p1.jpg" alt="Imagem 1">
-        <div class="p-4">
-          <h3 class="font-bold text-lg text-center">TÍTULO 1</h3>
-          <p class="mt-2 text-center">Descrição da Imagem 1</p>
-        </div>
-      </div>
-      <div class="overflow-hidden">
-        <img class="w-56 h-56 rounded-xl" src="puppies/p2.jpg" alt="Imagem 1">
-        <div class="p-4">
-          <h3 class="font-bold text-lg text-center">TÍTULO 1</h3>
-          <p class="mt-2 text-center">Descrição da Imagem 1</p>
-        </div>
-      </div>
-      <div class="overflow-hidden">
-        <img class="w-56 h-56 rounded-xl" src="puppies/p3.jpg" alt="Imagem 1">
-        <div class="p-4">
-          <h3 class="font-bold text-lg text-center">TÍTULO 1</h3>
-          <p class="mt-2 text-center">Descrição da Imagem 1</p>
-        </div>
-      </div>
-      <div class="overflow-hidden">
-        <img class="w-56 h-56 rounded-xl" src="puppies/p4.jpg" alt="Imagem 1">
-        <div class="p-4">
-          <h3 class="font-bold text-lg text-center">TÍTULO 1</h3>
-          <p class="mt-2 text-center">Descrição da Imagem 1</p>
-        </div>
-      </div>
-      <div class="overflow-hidden">
-        <img class="w-56 h-56 rounded-xl" src="puppies/p5.jpg" alt="Imagem 1">
-        <div class="p-4">
-          <h3 class="font-bold text-lg text-center">TÍTULO 1</h3>
-          <p class="mt-2 text-center">Descrição da Imagem 1</p>
-        </div>
-      </div>
-      <div class="overflow-hidden">
+      <div class="overflow-hidden bg-pink-400 rounded-xl">
         <img class="w-56 h-56 rounded-xl" src="puppies/p6.jpg" alt="Imagem 1">
         <div class="p-4">
-          <h3 class="font-bold text-lg text-center">TÍTULO 1</h3>
-          <p class="mt-2 text-center">Descrição da Imagem 1</p>
+          <h3 class="font-bold text-lg text-center">Gremistinha</h3>
+          <p class="mt-2 text-center"></p>
+        </div>
+      </div>
+      <div class="overflow-hidden bg-pink-400 rounded-xl">
+        <img class="w-56 h-56 rounded-xl" src="puppies/p2.jpg" alt="Imagem 1">
+        <div class="p-4">
+          <h3 class="font-bold text-lg text-center">Coelho da Páscoa</h3>
+          <p class="mt-2 text-center"></p>
+        </div>
+      </div>
+      <div class="overflow-hidden bg-pink-400 rounded-xl">
+        <img class="w-56 h-56 rounded-xl" src="puppies/p3.jpg" alt="Imagem 1">
+        <div class="p-4">
+          <h3 class="font-bold text-lg text-center">Batata</h3>
+          <p class="mt-2 text-center"></p>
+        </div>
+      </div>
+      <div class="overflow-hidden bg-pink-400 rounded-xl">
+        <img class="w-56 h-56 rounded-xl" src="puppies/p4.jpg" alt="Imagem 1">
+        <div class="p-4">
+          <h3 class="font-bold text-lg text-center">Vaquinha</h3>
+          <p class="mt-2 text-center"></p>
+        </div>
+      </div>
+      <div class="overflow-hidden bg-pink-400 rounded-xl">
+        <img class="w-56 h-56 rounded-xl" src="puppies/p5.jpg" alt="Imagem 1">
+        <div class="p-4">
+          <h3 class="font-bold text-lg text-center">Pandão</h3>
+          <p class="mt-2 text-center"></p>
+        </div>
+      </div>
+      <div class="overflow-hidden bg-pink-400 rounded-xl">
+        <img class="w-56 h-56 rounded-xl" src="puppies/p1.jpg" alt="Imagem 1">
+        <div class="p-4">
+          <h3 class="font-bold text-lg text-center">Mamaquinho</h3>
+          <p class="mt-2 text-center"></p>
         </div>
       </div>
     </div>
@@ -146,13 +143,13 @@
     const sidebar = document.querySelector('.sidebar');
     const profile = document.querySelector(".profile")
 
-  const arrowIcon = document.getElementById('arrow-icon');
-  arrowIcon.addEventListener('click', () => {
-    arrowIcon.classList.add('clicked');
-    setTimeout(() => {
-      arrowIcon.classList.remove('clicked');
-    }, 500);
-  });
+    const arrowIcon = document.getElementById('arrow-icon');
+    arrowIcon.addEventListener('click', () => {
+      arrowIcon.classList.add('clicked');
+      setTimeout(() => {
+        arrowIcon.classList.remove('clicked');
+      }, 500);
+    });
 
   
     btn.addEventListener('click', () => {
